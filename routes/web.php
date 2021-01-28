@@ -13,10 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/pegawai/tambah','PegawaiController@tambah');
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::post('/pegawai/store','PegawaiController@store');
+
+Route::get('/pegawai','PegawaiController@index');
